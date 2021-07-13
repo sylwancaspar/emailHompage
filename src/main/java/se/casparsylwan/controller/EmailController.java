@@ -2,6 +2,7 @@ package se.casparsylwan.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import se.casparsylwan.services.MailService;
 
 @RestController
 @RequestMapping("/api/v1/mail/")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class EmailController {
 
 	MailService service;
